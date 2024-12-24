@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #80d0ff, #cce4ff);
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 30vw; /* 30% del ancho de la pantalla */
+            max-width: 150px;
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 90%;
+            max-width: 400px;
+            max-height: 80%;
+            padding: 20px;
+            background: white;
+            border: 2px solid #d4a373;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+            transition: transform 0.5s ease;
+            z-index: 10;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .popup.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .button button {
+            background-color: #ff7b7b;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            max-width: 200px;
+        }
+
+        .button button:hover {
+            background-color: #ff4c4c;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.2em;
+            }
+
+            .popup {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .button button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header"> 
+        
+        <h1>Hadeeee... te llegó una carta</h1>
+        <hr>
+        <img src=".\imgs\img1.jpeg" alt="Vaca con sobre"> <!-- Cambia la ruta a tu imagen -->
+        <h1>De MaNoel xD<hr>Con cariño para ti Hade :3</h1>
+        <hr>    
+    </div>
+    <div class="popup"id="popup">
+        <p>Bueno Hadeee... feliz navidad, (antes que nada deberias poder hacer scrool
+            porque esta cartita es larguita noma)...sabes mi tarjetita aunque yo creo que
+            me salio bonita siento que xd, no fue lo suficientemente grande como
+            para poner todo lo que me hubiera gustado...primero hade dentro de mi
+            mente distorcionada la navidad es una fecha de felicidad y dar regalos...
+            pero regalos...mmm que hagan ilusionar a nuestro niño interior xd no sé
+            si me explico, por eso te regalo un vasito de chopper, porque esta bonito
+            y siento y espero que te haya gustado y haya emocionado a tu niña interior xd
+            lo mismo con el girasolsito, aunque no se escoger flores xd hace muuucho
+            tiempo que no compro flores, esa florcita espero que te ilumne como un sol xd
+            y que viva tal vez no fisicamente por siempre xd pero que te ilumne desde el mas allá...
+            los politos espero te gusten sinceramente, espero te den tambien, ya tengo traumas
+            Hadeee, espero sinceramente algun dia tener el placer de verte con alguno puesto
+            y el chocolatito Hade, para que endulces tu nochesita, tal vez en algun momento
+            algo o alguien te la quiere amargar y ahi es el momento de tomarse un respiro
+            y comer un chocolatito...en resumen hade espero que hoy te diviertas xd lo pases bien
+            con tu familia comas tu panetoncito con tu chocolatito y no se las costumbres de tu casa
+            porque no cuentas los chismes, sin embargo a ti personalmente Hade deseo que hoy
+            irradies felicidad y recibas felicidad de todos y a todos...te deseo una muy buena
+            navidaaaa, y espero que me muestres tu obra de arquitectura armando tu nacimiento
+            y que me muestreees que te regalaron xddd y si no hay regalos como en mi caso(salvo el 
+            que tu me diste)...no importa, por que el mayor regalo que puedo teneeer es estar vivo xd para mandarte 
+            esta cartita...entonces tu mayor regalo es leer mi carta :v creo que estodo Hade,
+            si te digo mas cosas ya no voy a saber que decirte en año nuevo, mi deseo es que hoy estes especialmente
+            feliz, y que mañana y los dias que vienen, esa felicidad se mantenga, a pesar de todo...
+            
+        </p> 🎁
+    </div>
+
+    <div class="button" >
+        <button onclick="mostrarPopup()">Abrelaaa!!</button>
+    </div>
+
+    <script>
+        function mostrarPopup() {
+            document.getElementById('popup').classList.add('show');
+        }
+    </script>
+</body>
+</html>
